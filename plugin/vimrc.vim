@@ -4,7 +4,8 @@ let g:nuth_path = fnamemodify(resolve(expand("<sfile>:p")),":h:h")
 
 " encoding {{{
 
-setglobal fileencoding=utf-8 
+let &termencoding=&encoding
+let &fileencoding=&encoding
 setglobal encoding=utf-8
 
 " }}}
@@ -28,10 +29,15 @@ let g:mapleader = " "
 let g:maplocalleader = " "
 
 set pastetoggle=<F12>
+" reindent code
 nmap <F11> 1G=G
+" toggle line numbers
+map <F8> :set number!<CR><Bar>:echo "line numbers: " . strpart("OffOn", 3 * &number, 3) <CR>
 nmap <F6> :NERDTreeToggle<CR>
+" jump to next compiler issue
 nmap <F2> :cnext<CR>
 
+" toggle spell check
 map <Leader>s :set spell!<CR><Bar>:echo "Spell Check: " . strpart("OffOn", 3 * &spell, 3)<CR>
 
 " tabbing like ff/chrome/irssi
@@ -71,6 +77,14 @@ set history=50
 set laststatus=2
 set wildignore+=*.aux,*.log,*.nav,*.out,*.snm,*.toc,*.bbl,*.blg,*.pdf,*.dvi,*.ps,*.o,*.pyc,*.class,*.fasl,*.exe,*.so
 " set statusline=%F%m%r%h%w\ [TYPE=%Y\ %{&ff}]\ [%l/%L\ (%p%%)]
+
+" make scrolling happen before cursor
+" hits last line of text to see a bit
+" more surrounding text
+set scrolloff=4
+
+" set xterm title and icon-title (see statusline for expandos)
+set title
 
 " }}}
 " filetypes {{{
