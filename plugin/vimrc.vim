@@ -89,19 +89,6 @@ map <F4> :emenu <C-Z>
 
 " }}}
 " plugins {{{
-
-" vim-addon-manager {{{
-
-" call scriptmanager#Activate([])
-" let g:vim_script_manager['plugin_root_dir'] = $HOME . '/.vim-addons'
-" call scriptmanager#Activate(["The_NERD_tree", "vim-latex", "localvimrc" , "pastie", "DoxygenToolkit", "vcscommand", "scala-syntax", "tagbar"])
-
-" }}}
-" load plugins {{{
-" runtime pastie.vim
-" runtime DoxygenToolkit.vim
-
-" }}}
 " plugin custom settings {{{
 
 let g:localvimrc_ask = 0

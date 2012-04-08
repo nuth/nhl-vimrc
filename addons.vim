@@ -1,0 +1,8 @@
+call vam#ActivateAddons(["The_NERD_tree"])
+call vam#ActivateAddons(["vim-addon-local-vimrc"])
+call vam#ActivateAddons(["vim-latex"])
+call vam#ActivateAddons(["pastie"])
+call vam#ActivateAddons(["DoxygenToolkit"])
+call vam#ActivateAddons(["vcscommand"])
+call vam#ActivateAddons(["scala-syntax"])
+call vam#ActivateAddons(["tagbar"])

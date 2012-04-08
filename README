@@ -1,0 +1,8 @@
+" .vimrc should look like this
+
+set runtimepath+=~/.vim-addons/vim-addon-manager
+call vam#ActivateAddons(["vim-nuth"])
+
+runtime addons.vim
+
+" vim: set foldmethod=marker :
