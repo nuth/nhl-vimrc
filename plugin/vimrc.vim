@@ -2,6 +2,22 @@ set nocompatible
 
 let g:nuth_path = fnamemodify(resolve(expand("<sfile>:p")),":h:h")
 
+" statusline {{{
+" Fugitive git statusline
+set statusline=%{fugitive#statusline()}\ 
+" Filename etc.
+set statusline+=%f%m%r%h%w
+" char code
+set statusline+=%=[%B]\ 
+" line/totallines:column
+set statusline+=[%l/%L:%v]\ 
+" encoding
+set statusline+=[%{strlen(&fenc)?&fenc:&enc}]\ 
+" filetype
+set statusline+=%y\ 
+" file format
+set statusline+=[%{&ff}]
+" }}}
 " encoding {{{
 
 let &termencoding=&encoding
