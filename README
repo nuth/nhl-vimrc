@@ -1,7 +1,7 @@
 " .vimrc should look like this
 
 set runtimepath+=~/.vim-addons/vim-addon-manager
-call vam#ActivateAddons(["vim-nuth"])
+call vam#ActivateAddons(["nhl-vimrc"])
 
 runtime addons.vim
 
